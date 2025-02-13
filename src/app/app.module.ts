@@ -7,11 +7,15 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { LoginPageComponent } from './login-page/login-page.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import {MatButtonModule} from '@angular/material/button';
+import { AdminDashboardComponent } from './admin-dashboard/admin-dashboard.component';
+import { UserChatbotComponent } from './user-chatbot/user-chatbot.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    LoginPageComponent
+    LoginPageComponent,
+    AdminDashboardComponent,
+    UserChatbotComponent
   ],
   imports: [
     BrowserModule,
