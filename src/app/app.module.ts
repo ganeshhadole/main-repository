@@ -9,20 +9,22 @@ import { ReactiveFormsModule } from '@angular/forms';
 import {MatButtonModule} from '@angular/material/button';
 import { AdminDashboardComponent } from './admin-dashboard/admin-dashboard.component';
 import { UserChatbotComponent } from './user-chatbot/user-chatbot.component';
+import { MatIconModule } from '@angular/material/icon';
 
 @NgModule({
   declarations: [
     AppComponent,
     LoginPageComponent,
     AdminDashboardComponent,
-    UserChatbotComponent
+    UserChatbotComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
     ReactiveFormsModule,
-    MatButtonModule
+    MatButtonModule,
+    MatIconModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,1 +1,61 @@
-<p>admin-dashboard works!</p>
+<div class="app-container">
+    <!-- Top Navbar -->
+    <div class="top-navbar" [class.collapsed]="!isSidebarExpanded">
+        <div class="profile-name"><span > Hi JD</span></div>  
+
+      <div class="profile-section">    
+       <mat-icon>account_circle</mat-icon>
+      </div>
+    </div>
+  
+    <!-- Sidebar -->
+    <div class="sidebar" [class.collapsed]="!isSidebarExpanded">
+        <div class="logo-name"> 
+            <mat-icon>home_outline</mat-icon>
+            <span>AI-ChatBot </span>
+        </div>
+        <button class="toggle-btn" (click)="toggleSidebar()">
+            <mat-icon>menu</mat-icon>
+          </button>
+      <ul class="nav-list">
+        <li *ngFor="let item of menuItems">
+          <mat-icon>{{ item.icon }}</mat-icon>
+          <span *ngIf="isSidebarExpanded">{{ item.name }}</span>
+        </li>
+      </ul>
+    </div>
+  
+    <!-- Main Content -->
+    <div class="main-content" [class.expanded]="!isSidebarExpanded">
+   <div class="sub-div">
+    <div class="top-header">
+        <mat-icon>info_outline</mat-icon>
+        <i class="fas fa-filter"> </i>
+       </div>
+       <div class="scroll-top">
+        <div class="row">
+            <div class="col-lg-3 col-md-6 col-sm-12 mainKpiCards" *ngFor="let a of kpiData">
+              <div class="kpi-card">
+                <span class="kpi-name">{{ a.KPI_NAME }}</span>
+                
+                <span class="kpi-value">{{ a.value }}</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-lg-4 col-md-4 col-sm-6 mainGraphs" *ngFor="let a of kpiData">
+              <div class="graph-card">
+                <span class="graph-name">{{ a.KPI_NAME }}</span>
+                <hr>
+                <span class="graph-value">{{ a.value }}</span>
+              </div>
+            </div>
+          </div>
+       </div>
+   </div>
+      
+    </div>
+  </div>
+  
+
