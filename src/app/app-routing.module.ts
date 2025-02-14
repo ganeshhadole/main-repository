@@ -3,6 +3,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { LoginPageComponent } from './login-page/login-page.component';
 import { AdminDashboardComponent } from './admin-dashboard/admin-dashboard.component';
 import { UserChatbotComponent } from './user-chatbot/user-chatbot.component';
+import { MatIconModule } from '@angular/material/icon';
 
 const routes: Routes = [
   {
@@ -24,7 +25,7 @@ const routes: Routes = [
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
+  imports: [RouterModule.forRoot(routes),MatIconModule],
   exports: [RouterModule]
 })
 export class AppRoutingModule { }
